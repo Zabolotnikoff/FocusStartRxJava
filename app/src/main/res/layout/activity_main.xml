@@ -11,7 +11,7 @@
         android:name="com.example.focusstartrxjava.ScrollingFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@+id/textViewCounterStatic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -27,20 +27,42 @@
         android:text="0"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/editTextString"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="Кол-во совпадений" />
+        app:layout_constraintStart_toEndOf="@+id/textViewCounterStatic2"
+        tools:text="2000000" />
+
+    <TextView
+        android:id="@+id/textViewCounterStatic2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Static:"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextString"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewCounterStatic3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginBottom="16dp"
+        android:text="Dynamic:"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextString"
+        app:layout_constraintStart_toEndOf="@+id/textViewCounterStatic2" />
 
     <TextView
         android:id="@+id/textViewCounterDynamic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
         android:text="0"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/editTextString"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:text="Совпадения" />
+        app:layout_constraintStart_toEndOf="@+id/textViewCounterStatic3"
+        tools:text="3000000" />
 
     <EditText
         android:id="@+id/editTextString"
