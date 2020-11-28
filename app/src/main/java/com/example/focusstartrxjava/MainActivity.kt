@@ -88,8 +88,8 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun setDynamicCounter(word: String = "", isZero: Boolean = false) {
-        if (isZero || dynamicSearchString.isEmpty()) {
+    private fun setDynamicCounter(word: String = "") {
+        if (dynamicSearchString.isEmpty()) {
             setDynamicCounterIsZero()
         } else if (word.contains(dynamicSearchString)) {
             dynamicCounter++
