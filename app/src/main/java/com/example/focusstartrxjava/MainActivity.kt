@@ -20,14 +20,12 @@ class MainActivity : AppCompatActivity() {
     private var dynamicSearchString: String = ""
     private lateinit var bigText: String
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val TIME_OUT = 700L
         bigText = textViewText.text.toString()
-
 
         compositeDisposable.add(
                 getEditable(editTextString)
@@ -39,7 +37,6 @@ class MainActivity : AppCompatActivity() {
                             textViewCounterStatic.text = (staticCounter).toString()
                         }
         )
-
 
         compositeDisposable.add(
                 getEditable(editTextString)
@@ -71,7 +68,6 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
     }
 
-
     private fun setStatics(editable: Editable) {
         staticSearchString = editable.toString()
         staticCounter =
@@ -82,11 +78,9 @@ class MainActivity : AppCompatActivity() {
                 }
     }
 
-
     private fun setDynamicCounterIsZero() {
         dynamicCounter = 0
     }
-
 
     private fun setDynamicCounter(word: String = "") {
         if (dynamicSearchString.isEmpty()) {

@@ -9,7 +9,7 @@ import io.reactivex.schedulers.Schedulers
 import android.widget.EditText
 
 
-fun getEditable(editTextString : EditText) = Observable.create { emitter: ObservableEmitter<Editable?> ->
+fun getEditable(editTextString: EditText) = Observable.create { emitter: ObservableEmitter<Editable?> ->
     val watcher: TextWatcher = object : TextWatcher {
         override fun beforeTextChanged(chSeq: CharSequence, start: Int, count: Int, after: Int) {}
         override fun onTextChanged(chSeq: CharSequence, start: Int, before: Int, count: Int) {}
